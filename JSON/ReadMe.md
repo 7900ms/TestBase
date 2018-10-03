@@ -167,6 +167,7 @@ https://www.jianshu.com/p/2910114bb78b # 使用URL直接读取网络资源，使
 HttpURLConnection 网络超时异常 (返回空字符，重新开始一个获取)
 https://segmentfault.com/q/1010000000604508
 https://zhuanlan.zhihu.com/p/24723946
+http://unirest.io/java.html # Unirest.setTimeouts(long connectionTimeout, long socketTimeout);
 
 2. java.net.URL ，通过 java.net.URL 来获取资源
 http://www.runoob.com/java/java-url-processing.html
