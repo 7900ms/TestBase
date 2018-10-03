@@ -162,6 +162,9 @@ G HttpURLConnection or URLConnection
 Android 6.0(API 23) SDK后，Android的网络请求强制使用HttpUrlConnection，并且SDK中也移除了 HttpClient 库，同时也移除了SSL 和Notification的setLatestEventInfo方法
 https://www.jianshu.com/p/2910114bb78b # 使用URL直接读取网络资源，使用URLConnection提交Get请求或Post请求
 
+HttpURLConnection 网络超时异常 (返回空字符，重新开始一个获取)
+https://segmentfault.com/q/1010000000604508
+
 2. java.net.URL ，通过 java.net.URL 来获取资源
 http://www.runoob.com/java/java-url-processing.html
 https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java/17639826#17639826
