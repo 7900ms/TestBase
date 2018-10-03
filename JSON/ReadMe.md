@@ -167,15 +167,17 @@ http://www.runoob.com/java/java-url-processing.html
 https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java/17639826#17639826
 
 3. HttpClient，这是 Android SDK 自带的用于 get URL content 的类 
-HttpClient 相比 “传统 JDK 自带的 HttpURLConnection”，增加了易用性和灵活性 ('Apache HTTPClient' 已经过时了!!)。但是 需要引入 
+HttpClient 相比 “传统 JDK 自带的 HttpURLConnection”，增加了易用性和灵活性 (然而 'Apache HTTPClient' 已经过时了!!)。但是 需要引入 
 https://blog.csdn.net/wangpeng047/article/details/19624529 
 Apache HttpComponents 
 https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java/1359723#1359723 
+https://www.jianshu.com/p/2910114bb78b # 'Apache HTTPClient' 已经过时了 
 
 * HttpURLConnection is over than 'Apache HTTPClient'
 从 HttpClient 切换到 HttpURLConnection 
 https://blog.csdn.net/fengyuzhengfan/article/details/49253073
 https://stackoverflow.com/questions/9551058/urlconnection-or-httpclient-which-offers-better-functionality-and-more-efficie/15524143#15524143 
+
 
 G python requests text java
 https://stackoverflow.com/questions/9600327/is-there-an-equivalent-to-pythons-request-module-in-java-for-working-on-rest-ba
