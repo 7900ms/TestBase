@@ -96,3 +96,65 @@ https://www.v2ex.com/t/459569 # mock server, https://api.myjson.com/bins/hojm0 #
 https://www.v2ex.com/t/365568 # 前端后端分离项目中的 mock-server, json-server
 
 ```
+```
+范例1 - Python Requests
+r = requests.get('https://api.github.com/events')
+r.text (utf-8) 或 r.content(二进制)
+参考
+python下载文件的三种方法 https://blog.csdn.net/AaronWu2012/article/details/52565151 # requests 
+https://blog.csdn.net/xie_0723/article/details/51361006 # utf-8 或 二进制
+http://docs.python-requests.org/zh_CN/latest/user/quickstart.html
+
+范例1 - Java 自定义类 Request request 
+request.getResponseTextFromURL("http://w.com");
+用法
+public class DataBunch {
+    public int tmpTick;
+    public Dataset dataset;
+
+    public DataBunch(){
+        this.tmpTick = 0;
+        this.dataset = new Dataset();
+    }
+    public static class Dataset {
+        public java.util.List<String> urls;
+        public java.util.List<String> results;
+        private Request request;
+
+        public dataset(){
+            this.urls = new ArrayList<String>();
+            this.results = new ArrayList<String>();
+
+            this.urls.add("https://api.myjson.com/bins/hojm0");
+            this.urls.add("https://api.myjson.com/bins/we414");
+            this.urls.add("https://api.myjson.com/bins/we41z");
+            this.urls.add("https://api.myjson.com/bins/we4s3");
+            this.urls.add("https://api.myjson.com/bins/we4se");
+        }
+        public void fill(){
+            for (int i = 0; i < urls.size(); i++) {
+                String result = this.request.getResponseTextFromURL(this.urls[i]);
+                this.results.add(result);
+            }
+        }
+        public void getResults(){
+            for (int i = 0; i < results.size(); i++) {
+                System.out.println(results[i]);
+            }
+        }
+    }
+}
+
+关于 Request 类
+显然是 一个封装了的类，可以直接用 
+String url = "http://w.com";
+String result = this.request.getResponseTextFromURL(url); // 会卡进程，所以 最好 如果做写入 在新进程里做 写入 (类似 多线程 共享一个变量：一个线程，修改了 一个 list实例，另一个线程访问到 这种修改
+一个 list 实例，在一个线程的修改(list.addItem)，可以被，另一个线程访问到 已更新的list )
+
+自定义的 Request 类，是封装了一个用于 get URL content 的类。以下是 Java 里用于 get URL content 的类：
+1. java.net.HttpURLConnection，这是一个用于 get URL content 的类 👍🏽
+2. HttpClient，这是 Android SDK 自带的用于 get URL content 的类 
+HttpClient 相比 “传统 JDK 自带的 HttpURLConnection”，增加了易用性和灵活性。但是 需要引入
+https://blog.csdn.net/wangpeng047/article/details/19624529 
+
+```
