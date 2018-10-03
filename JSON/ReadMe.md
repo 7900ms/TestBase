@@ -153,8 +153,14 @@ String result = this.request.getResponseTextFromURL(url); // 会卡进程，所�
 
 自定义的 Request 类，是封装了一个用于 get URL content 的类。以下是 Java 里用于 get URL content 的类：
 1. java.net.HttpURLConnection，这是一个用于 get URL content 的类 👍🏽
-HttpURLConnection 继承自 URLConnection (URLConnection or HTTPURLConnection)
-基于它们自己封装就行了
+HttpURLConnection 继承自 URLConnection (URLConnection or HttpURLConnection)
+基于它们自己 "封装" 就行了。主要是类似
+HttpURLConnection con
+con.getInputStream
+G HttpURLConnection or URLConnection
+* https://developer.android.com/reference/java/net/HttpURLConnection
+Android 6.0(API 23) SDK后，Android的网络请求强制使用HttpUrlConnection，并且SDK中也移除了 HttpClient 库，同时也移除了SSL 和Notification的setLatestEventInfo方法
+https://www.jianshu.com/p/2910114bb78b # 使用URL直接读取网络资源，使用URLConnection提交Get请求或Post请求
 
 2. java.net.URL ，通过 java.net.URL 来获取资源
 http://www.runoob.com/java/java-url-processing.html
@@ -165,6 +171,11 @@ HttpClient 相比 “传统 JDK 自带的 HttpURLConnection”，增加了易用
 https://blog.csdn.net/wangpeng047/article/details/19624529 
 Apache HttpComponents 
 https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java/1359723#1359723 
+
+* HttpURLConnection is over than 'Apache HTTPClient'
+从 HttpClient 切换到 HttpURLConnection 
+https://blog.csdn.net/fengyuzhengfan/article/details/49253073
+https://stackoverflow.com/questions/9551058/urlconnection-or-httpclient-which-offers-better-functionality-and-more-efficie/15524143#15524143 
 
 G python requests text java
 https://stackoverflow.com/questions/9600327/is-there-an-equivalent-to-pythons-request-module-in-java-for-working-on-rest-ba
