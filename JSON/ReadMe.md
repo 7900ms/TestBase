@@ -86,6 +86,9 @@ https://raw.githubusercontent.com/7900ms/TestBase/master/JSON/2.json
 
 
 
-
+学习区：
+更多代码填充、临时服务器建立 
+typicode hotel // website development local dev suffix
+typicode json-server
 
 ```
