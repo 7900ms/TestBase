@@ -91,4 +91,8 @@ https://raw.githubusercontent.com/7900ms/TestBase/master/JSON/2.json
 typicode hotel // website development local dev suffix
 typicode json-server
 
+请求后返回一个json，可以自定义这个json 内容
+https://www.v2ex.com/t/459569 # mock server, https://api.myjson.com/bins/hojm0 # 延迟的效果好
+https://www.v2ex.com/t/365568 # 前端后端分离项目中的 mock-server, json-server
+
 ```
