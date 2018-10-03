@@ -157,6 +157,8 @@ HttpURLConnection 继承自 URLConnection (URLConnection or HttpURLConnection)
 基于它们自己 "封装" 就行了。主要是类似
 HttpURLConnection con
 con.getInputStream
+con.setConnectTimeout(30000);  
+con.setReadTimeout(30000);  
 G HttpURLConnection or URLConnection
 * https://developer.android.com/reference/java/net/HttpURLConnection
 Android 6.0(API 23) SDK后，Android的网络请求强制使用HttpUrlConnection，并且SDK中也移除了 HttpClient 库，同时也移除了SSL 和Notification的setLatestEventInfo方法
@@ -164,6 +166,7 @@ https://www.jianshu.com/p/2910114bb78b # 使用URL直接读取网络资源，使
 
 HttpURLConnection 网络超时异常 (返回空字符，重新开始一个获取)
 https://segmentfault.com/q/1010000000604508
+https://zhuanlan.zhihu.com/p/24723946
 
 2. java.net.URL ，通过 java.net.URL 来获取资源
 http://www.runoob.com/java/java-url-processing.html
