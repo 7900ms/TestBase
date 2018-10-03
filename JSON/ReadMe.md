@@ -153,9 +153,13 @@ String result = this.request.getResponseTextFromURL(url); // 会卡进程，所�
 
 自定义的 Request 类，是封装了一个用于 get URL content 的类。以下是 Java 里用于 get URL content 的类：
 1. java.net.HttpURLConnection，这是一个用于 get URL content 的类 👍🏽
+HttpURLConnection 继承自 URLConnection (URLConnection or HTTPURLConnection)
+基于它们自己封装就行了
+
 2. java.net.URL ，通过 java.net.URL 来获取资源
 http://www.runoob.com/java/java-url-processing.html
 https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java/17639826#17639826
+
 3. HttpClient，这是 Android SDK 自带的用于 get URL content 的类 
 HttpClient 相比 “传统 JDK 自带的 HttpURLConnection”，增加了易用性和灵活性。但是 需要引入
 https://blog.csdn.net/wangpeng047/article/details/19624529 
