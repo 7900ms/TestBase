@@ -167,7 +167,7 @@ http://www.runoob.com/java/java-url-processing.html
 https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java/17639826#17639826
 
 3. HttpClient，这是 Android SDK 自带的用于 get URL content 的类 
-HttpClient 相比 “传统 JDK 自带的 HttpURLConnection”，增加了易用性和灵活性。但是 需要引入
+HttpClient 相比 “传统 JDK 自带的 HttpURLConnection”，增加了易用性和灵活性 ('Apache HTTPClient' 已经过时了!!)。但是 需要引入 
 https://blog.csdn.net/wangpeng047/article/details/19624529 
 Apache HttpComponents 
 https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java/1359723#1359723 
